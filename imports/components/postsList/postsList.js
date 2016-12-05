@@ -17,14 +17,12 @@ class TodosListCtrl {
       posts() {
         const selector = {};
 
-        // If hide completed is checked, filter posts
         if (this.getReactively('hideCompleted')) {
           selector.checked = {
             $ne: true
           };
         }
 
-        // Show newest posts at the top
         return posts.find(selector, {
           sort: {
             createdAt: -1
@@ -45,7 +43,6 @@ class TodosListCtrl {
   }
 
   addpost(newpost) {
-    // Insert a post into the collection
     Meteor.call('posts.insert', newpost);
 
     // Clear form
@@ -53,7 +50,6 @@ class TodosListCtrl {
   }
 
   setChecked(post) {
-    // Set the checked property to the opposite of its current value
     Meteor.call('posts.setChecked', post._id, !post.checked);
   }
 
