@@ -1,0 +1,113 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'accounts-base' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose install initial load of /Users/amirjabbari/Desktop/simple-todos/package.json
+5 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/angular/package.json
+6 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/angular-meteor/package.json
+7 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/ansi-regex/package.json
+8 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/ansi-styles/package.json
+9 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/babel-runtime/package.json
+10 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/bcrypt/package.json
+11 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/bindings/package.json
+12 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/chalk/package.json
+13 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/core-js/package.json
+14 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/escape-string-regexp/package.json
+15 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/has-ansi/package.json
+16 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/jsondiffpatch/package.json
+17 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/meteor-node-stubs/package.json
+18 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/nan/package.json
+19 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/regenerator-runtime/package.json
+20 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/strip-ansi/package.json
+21 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/supports-color/package.json
+22 verbose installManyTop reading scoped package data from /Users/amirjabbari/Desktop/simple-todos/node_modules/underscore/package.json
+23 info package.json angular-meteor@1.3.11 No repository field.
+24 verbose readDependencies loading dependencies from /Users/amirjabbari/Desktop/simple-todos/package.json
+25 silly cache add args [ 'accounts-base', null ]
+26 verbose cache add spec accounts-base
+27 silly cache add parsed spec Result {
+27 silly cache add   raw: 'accounts-base',
+27 silly cache add   scope: null,
+27 silly cache add   name: 'accounts-base',
+27 silly cache add   rawSpec: '',
+27 silly cache add   spec: 'latest',
+27 silly cache add   type: 'tag' }
+28 silly addNamed accounts-base@latest
+29 verbose addNamed "latest" is being treated as a dist-tag for accounts-base
+30 info addNameTag [ 'accounts-base', 'latest' ]
+31 silly mapToRegistry name accounts-base
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry data Result {
+34 silly mapToRegistry   raw: 'accounts-base',
+34 silly mapToRegistry   scope: null,
+34 silly mapToRegistry   name: 'accounts-base',
+34 silly mapToRegistry   rawSpec: '',
+34 silly mapToRegistry   spec: 'latest',
+34 silly mapToRegistry   type: 'tag' }
+35 silly mapToRegistry uri https://registry.npmjs.org/accounts-base
+36 verbose addNameTag registry:https://registry.npmjs.org/accounts-base not in flight; fetching
+37 verbose request uri https://registry.npmjs.org/accounts-base
+38 verbose request no auth needed
+39 info attempt registry request try #1 at 4:33:20 PM
+40 verbose request id 60afeea68d23a3c8
+41 http request GET https://registry.npmjs.org/accounts-base
+42 http 404 https://registry.npmjs.org/accounts-base
+43 verbose headers { 'content-type': 'application/json',
+43 verbose headers   'cache-control': 'max-age=0',
+43 verbose headers   'content-length': '2',
+43 verbose headers   'accept-ranges': 'bytes',
+43 verbose headers   date: 'Mon, 05 Dec 2016 00:33:21 GMT',
+43 verbose headers   via: '1.1 varnish',
+43 verbose headers   age: '0',
+43 verbose headers   connection: 'keep-alive',
+43 verbose headers   'x-served-by': 'cache-sjc3135-SJC',
+43 verbose headers   'x-cache': 'MISS',
+43 verbose headers   'x-cache-hits': '0',
+43 verbose headers   'x-timer': 'S1480898000.605906,VS0,VE436',
+43 verbose headers   vary: 'Accept-Encoding' }
+44 silly get cb [ 404,
+44 silly get   { 'content-type': 'application/json',
+44 silly get     'cache-control': 'max-age=0',
+44 silly get     'content-length': '2',
+44 silly get     'accept-ranges': 'bytes',
+44 silly get     date: 'Mon, 05 Dec 2016 00:33:21 GMT',
+44 silly get     via: '1.1 varnish',
+44 silly get     age: '0',
+44 silly get     connection: 'keep-alive',
+44 silly get     'x-served-by': 'cache-sjc3135-SJC',
+44 silly get     'x-cache': 'MISS',
+44 silly get     'x-cache-hits': '0',
+44 silly get     'x-timer': 'S1480898000.605906,VS0,VE436',
+44 silly get     vary: 'Accept-Encoding' } ]
+45 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/accounts-base
+45 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+45 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+45 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+45 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+45 verbose stack     at emitTwo (events.js:87:13)
+45 verbose stack     at Request.emit (events.js:172:7)
+45 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+45 verbose stack     at emitOne (events.js:82:20)
+45 verbose stack     at Request.emit (events.js:169:7)
+45 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+46 verbose statusCode 404
+47 verbose pkgid accounts-base
+48 verbose cwd /Users/amirjabbari/Desktop/simple-todos
+49 error Darwin 16.3.0
+50 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "accounts-base"
+51 error node v4.5.0
+52 error npm  v2.15.9
+53 error code E404
+54 error 404 Registry returned 404 for GET on https://registry.npmjs.org/accounts-base
+54 error 404
+54 error 404 'accounts-base' is not in the npm registry.
+54 error 404 You should bug the author to publish it (or use the name yourself!)
+54 error 404 It was specified as a dependency of 'simple-todos'
+54 error 404
+54 error 404 Note that you can also install from a
+54 error 404 tarball, folder, http url, or git url.
+55 verbose exit [ 1, true ]
