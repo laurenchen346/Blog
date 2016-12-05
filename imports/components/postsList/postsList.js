@@ -1,38 +1,38 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import { Meteor } from 'meteor/meteor';
-import { Tasks } from '../../api/tasks.js';
+import { posts } from '../../api/posts.js';
 
-import template from './todosList.html';
+import template from './postsList.html';
 
 class TodosListCtrl {
   constructor($scope) {
     $scope.viewModel(this);
 
-    this.subscribe('tasks');
+    this.subscribe('posts');
 
     this.hideCompleted = false;
 
     this.helpers({
-      tasks() {
+      posts() {
         const selector = {};
 
-        // If hide completed is checked, filter tasks
+        // If hide completed is checked, filter posts
         if (this.getReactively('hideCompleted')) {
           selector.checked = {
             $ne: true
           };
         }
 
-        // Show newest tasks at the top
-        return Tasks.find(selector, {
+        // Show newest posts at the top
+        return posts.find(selector, {
           sort: {
             createdAt: -1
           }
         });
       },
       incompleteCount() {
-        return Tasks.find({
+        return posts.find({
           checked: {
             $ne: true
           }
@@ -44,32 +44,32 @@ class TodosListCtrl {
     })
   }
 
-  addTask(newTask) {
-    // Insert a task into the collection
-    Meteor.call('tasks.insert', newTask);
+  addpost(newpost) {
+    // Insert a post into the collection
+    Meteor.call('posts.insert', newpost);
 
     // Clear form
-    this.newTask = '';
+    this.newpost = '';
   }
 
-  setChecked(task) {
+  setChecked(post) {
     // Set the checked property to the opposite of its current value
-    Meteor.call('tasks.setChecked', task._id, !task.checked);
+    Meteor.call('posts.setChecked', post._id, !post.checked);
   }
 
-  removeTask(task) {
-    Meteor.call('tasks.remove', task._id);
+  removepost(post) {
+    Meteor.call('posts.remove', post._id);
   }
 
-  setPrivate(task) {
-    Meteor.call('tasks.setPrivate', task._id, !task.private);
+  setPrivate(post) {
+    Meteor.call('posts.setPrivate', post._id, !post.private);
   }
 }
 
-export default angular.module('todosList', [
+export default angular.module('postsList', [
   angularMeteor
 ])
-  .component('todosList', {
-    templateUrl: 'imports/components/todosList/todosList.html',
+  .component('postsList', {
+    templateUrl: 'imports/components/postsList/postsList.html',
     controller: ['$scope', TodosListCtrl]
   });

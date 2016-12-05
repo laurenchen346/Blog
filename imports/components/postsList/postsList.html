@@ -1,0 +1,31 @@
+<header>
+  <h1>Blog ( {{$ctrl.incompleteCount}} )</h1>
+
+  <label class="hide-completed">
+    <input type="checkbox" ng-model="$ctrl.hideCompleted"/>
+    Hide Read Posts
+  </label>
+
+  <login-buttons></login-buttons>
+
+  <form class="new-post" ng-submit="$ctrl.addpost($ctrl.newpost)" ng-show="$ctrl.currentUser">
+    <input ng-model="$ctrl.newpost" type="text" name="text" placeholder="Type to add new post"/>
+  </form>
+  
+</header>
+
+<ul>
+<li ng-repeat="post in $ctrl.posts" ng-class="{'checked': post.checked, 'private': post.private}">
+  <li ng-repeat="post in $ctrl.posts" ng-class="{'checked': post.checked}">
+    <button class="delete" ng-click="$ctrl.removepost(post)">&times;</button>
+
+    <input type="checkbox" ng-checked="post.checked" ng-click="$ctrl.setChecked(post)" class="toggle-checked"/>
+
+    <span class="text">
+      <strong>{{post.username}}</strong> - {{post.text}}
+    </span>
+    <button class="toggle-private" ng-click="$ctrl.setPrivate(post)" ng-show="post.owner === $ctrl.currentUser._id">
+      {{post.private == true ? "Private" : "Public"}}
+    </button>
+  </li>
+</ul>
