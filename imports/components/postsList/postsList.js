@@ -2,7 +2,6 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import { Meteor } from 'meteor/meteor';
 import { posts } from '../../api/posts.js';
-
 import template from './postsList.html';
 
 class TodosListCtrl {
